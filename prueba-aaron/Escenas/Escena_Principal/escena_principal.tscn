@@ -8,3 +8,4 @@
 zoom = Vector2(2.6, 2.6)
 
 [node name="Prueba_Nivel" parent="." unique_id=1957409361 instance=ExtResource("1_gcge2")]
+position = Vector2(-3, 4)

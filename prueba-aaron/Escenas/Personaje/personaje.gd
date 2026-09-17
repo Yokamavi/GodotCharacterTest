@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 		if gravedad: #Si la gravedad cero no esta activada (true)
 			velocity = velocity + get_gravity() * delta
 		else:  #Si la gravedad cero esta activada (false)
-			velocity = velocity + get_gravity() * delta * 0.1
+			velocity = velocity + get_gravity() * delta * 0.5
 	else:
 		jumpCont = 3
 		

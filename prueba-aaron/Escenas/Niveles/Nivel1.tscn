@@ -1,0 +1,37 @@
+[gd_scene format=4 uid="uid://drnuo3acdyomg"]
+
+[ext_resource type="PackedScene" uid="uid://lkfvlaydbaua" path="res://Escenas/Borders/bordes.tscn" id="1_0s0qd"]
+[ext_resource type="TileSet" uid="uid://dtw7gkj7tvwno" path="res://tile_sets/mazmorra.tres" id="2_6kg4b"]
+[ext_resource type="PackedScene" uid="uid://00vmvcr28xxg" path="res://Escenas/Personaje/personaje.tscn" id="3_6kg4b"]
+[ext_resource type="PackedScene" uid="uid://cxa3k1ka0uu6x" path="res://Escenas/moneda/moneda.tscn" id="4_1i2dy"]
+[ext_resource type="PackedScene" uid="uid://8nhw3kykcqgw" path="res://Escenas/Trampa/trampa.tscn" id="4_hjpyy"]
+[ext_resource type="PackedScene" uid="uid://bcr6bej8g87pu" path="res://Escenas/contenedor_monedas/contenedor_monedas.tscn" id="4_j3yft"]
+
+[node name="Prueba_Nivel" type="Node2D" unique_id=1957409361]
+
+[node name="Fondo" type="TileMapLayer" parent="." unique_id=2128742397]
+tile_map_data = PackedByteArray("AAAGAPn/AAACAAMAAAAGAPr/AAACAAMAAAAGAPv/AAACAAMAAAAJAPn/AAACAAMAAAAJAPr/AAACAAMAAAAJAPv/AAACAAMAAAA=")
+tile_set = ExtResource("2_6kg4b")
+
+[node name="Bordes" parent="." unique_id=1221269482 instance=ExtResource("1_0s0qd")]
+
+[node name="Nivel" type="TileMapLayer" parent="." unique_id=1764256136]
+tile_map_data = PackedByteArray("AAD5/wYAAAAAAAAAAAD5/wUAAAAAAAAAAAD6/wUAAAAAAAAAAAD6/wYAAAAAAAAAAAD+/wYAAAAAAAAAAAD+/wUAAAAAAAAAAAD+/wQAAAAAAAAAAAD+/wMAAAAAAAAAAAD+/wIAAAAAAAAAAAD//wIAAAAAAAAAAAD//wMAAAAAAAAAAAD//wQAAAAAAAAAAAD//wUAAAAAAAAAAAD//wYAAAAAAAAAAAAJAAMAAAAAAAAAAAAIAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAADAAMAAAAAAAAAAAADAAIAAAAAAAAAAAADAAEAAAAAAAAAAAADAAAAAAAAAAAAAAADAP//AAAAAAAAAAADAP7/AAAAAAAAAAACAP7/AAAAAAAAAAABAP7/AAAAAAAAAAAAAP7/AAAAAAAAAAD///7/AAAAAAAAAAD+//7/AAAAAAAAAADz//7/AAAAAAAAAAD0//7/AAAAAAAAAAD1//7/AAAAAAAAAAD2//7/AAAAAAAAAAD3//7/AAAAAAAAAAD4//7/AAAAAAAAAAD5//7/AAAAAAAAAAD6//7/AAAAAAAAAAD7//7/AAAAAAAAAAD8//7/AAAAAAAAAAD9//7/AAAAAAAAAADz//z/AAAAAAAAAADz//3/AAAAAAAAAAD0//3/AAAAAAAAAAD1//3/AAAAAAAAAAD2//3/AAAAAAAAAAD2//z/AAAAAAAAAAD3//z/AAAAAAAAAAD3//3/AAAAAAAAAAD4//z/AAAAAAAAAAD4//3/AAAAAAAAAAD5//z/AAAAAAAAAAD5//3/AAAAAAAAAAD6//3/AAAAAAAAAAD7//3/AAAAAAAAAAD8//3/AAAAAAAAAAD9//3/AAAAAAAAAAD+//3/AAAAAAAAAAD+//z/AAAAAAAAAAD///3/AAAAAAAAAAD///z/AAAAAAAAAAAMAP7/AAAAAAAAAAALAP7/AAAAAAAAAAALAP//AAAAAAAAAAAMAP//AAAAAAAAAAALAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAKAP7/AAABAAEAAAAKAP//AAABAAEAAAD9//z/AAADAAEAAAD8//z/AAADAAEAAAD6//z/AAADAAEAAAD7//z/AAADAAEAAAD0//z/AAADAAEAAAD1//z/AAADAAEAAAAMAAMAAAACAAAAAAAMAAYAAAACAAAAAAAEAAEAAAACAAAAAAAFAAEAAAACAAAAAAAEAP7/AAACAAAAAAAFAP7/AAACAAAAAAAGAPv/AAABAAAAAAAHAPv/AAABAAAAAAAIAPv/AAABAAAAAAAJAPv/AAABAAAAAAA=")
+tile_set = ExtResource("2_6kg4b")
+
+[node name="Trampa" parent="." unique_id=1268922539 instance=ExtResource("4_hjpyy")]
+position = Vector2(120, 8)
+
+[node name="contenedorMonedas" parent="." unique_id=1218844537 instance=ExtResource("4_j3yft")]
+
+[node name="moneda" parent="contenedorMonedas" unique_id=1009964220 instance=ExtResource("4_1i2dy")]
+position = Vector2(-95, 68)
+
+[node name="moneda2" parent="contenedorMonedas" unique_id=878175035 instance=ExtResource("4_1i2dy")]
+position = Vector2(-15, 20)
+
+[node name="moneda3" parent="contenedorMonedas" unique_id=1142325369 instance=ExtResource("4_1i2dy")]
+position = Vector2(59, 94)
+
+[node name="Personaje" parent="." unique_id=784702786 instance=ExtResource("3_6kg4b")]
+position = Vector2(-188, 93)

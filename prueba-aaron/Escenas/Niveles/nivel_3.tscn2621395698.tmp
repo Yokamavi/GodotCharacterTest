@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cxa3k1ka0uu6x" path="res://Escenas/moneda/moneda.tscn" id="3_navd5"]
 [ext_resource type="TileSet" uid="uid://dtw7gkj7tvwno" path="res://tile_sets/mazmorra.tres" id="4_navd5"]
 [ext_resource type="PackedScene" uid="uid://d204p12tu8vgf" path="res://Escenas/Fireball/fireball.tscn" id="5_tj5dq"]
-[ext_resource type="PackedScene" uid="uid://8nhw3kykcqgw" path="res://Escenas/Trampa/trampa.tscn" id="7_navd5"]
+[ext_resource type="PackedScene" uid="uid://b1bhwnpqxcmp8" path="res://Escenas/Bala_bill/bala_bill.tscn" id="7_navd5"]
 
 [sub_resource type="Animation" id="Animation_tj5dq"]
 length = 0.001
@@ -70,7 +70,7 @@ position = Vector2(195, 97)
 position = Vector2(-194, 99)
 
 [node name="Nivel" type="TileMapLayer" parent="." unique_id=621944519]
-tile_map_data = PackedByteArray("AADz/wQAAAAAAAAAAAD0/wQAAAAAAAAAAAD1/wQAAAAAAAAAAAAIAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAD2/wQAAAAAAAAAAAD3/wQAAAAAAAAAAAD4/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAD6/wQAAAAAAAAAAAD7/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAALAAQAAAAAAAAAAAAKAAQAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AADz/wQAAAAAAAAAAAD0/wQAAAAAAAAAAAD1/wQAAAAAAAAAAAAMAAQAAAAAAAAAAAALAAQAAAAAAAAAAAAKAAQAAAAAAAAAAAAJAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAD2/wQAAAAAAAAAAAD3/wQAAAAAAAAAAAD4/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAD6/wQAAAAAAAAAAAD7/wQAAAAAAAAAAAD8/wQAAAAAAAAAAAD9/wQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAA=")
 tile_set = ExtResource("4_navd5")
 
 [node name="fireball" parent="." unique_id=247386416 node_paths=PackedStringArray("animationPlayer") instance=ExtResource("5_tj5dq")]
@@ -80,5 +80,5 @@ animationPlayer = NodePath("AnimationPlayer")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="fireball" unique_id=1168165333]
 libraries/ = SubResource("AnimationLibrary_navd5")
 
-[node name="Trampa" parent="." unique_id=1268922539 instance=ExtResource("7_navd5")]
-position = Vector2(152, 72)
+[node name="Bala_Bill" parent="." unique_id=2033031927 instance=ExtResource("7_navd5")]
+position = Vector2(264, 41)

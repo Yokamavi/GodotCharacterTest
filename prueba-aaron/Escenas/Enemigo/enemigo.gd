@@ -5,26 +5,25 @@ extends CharacterBody2D
 @export var area_danho: Area2D
 @export var forma_danho: CollisionShape2D  # zona_danho
 @export var area_deteccion: Area2D
-
+@export var area_enemigo: Area2D
 const FRAMES_GOLPE := [4, 5]
 
 var ataque: bool = false
 var velocidad: float = -100.0
-
+var muerto: bool = false
 func _ready() -> void:
 	forma_danho.disabled = true
 	area_deteccion.body_entered.connect(_on_deteccion_body_entered)
 	area_danho.body_entered.connect(_on_danho_body_entered)
 	animacion.frame_changed.connect(_on_frame_changed)
 	animacion.animation_finished.connect(_on_animation_finished)
-
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+		
 	if raycast.get_collider() != null:
 		girar()
-
+	
 	if ataque:
 		velocity.x = 0
 	else:
